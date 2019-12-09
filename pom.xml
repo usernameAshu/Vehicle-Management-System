@@ -63,6 +63,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<finalName>VMSVersion1</finalName>
 	</build>
 
 </project>
