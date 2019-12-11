@@ -10,44 +10,44 @@ import javax.persistence.Table;
 public class Car {
 	
 	@Id
-	private String car_reg_no ;
-	private String car_brand ;
-	private String car_brand_model;
+	private String carRegNo ;
+	private String carBrand ;
+	private String carBrandModel;
 	
 	@ManyToOne
 	private Customer customer;
 	
-	public Car(String car_reg_no, String car_brand, String car_brand_model) {
-		this.car_reg_no = car_reg_no;
-		this.car_brand = car_brand;
-		this.car_brand_model = car_brand_model;
+	public Car(String carRegNo, String carBrand, String carBrandModel) {
+		this.carRegNo = carRegNo;
+		this.carBrand = carBrand;
+		this.carBrandModel = carBrandModel;
 	}
 
 	public Car() {
 	}
 
-	public String getCar_reg_no() {
-		return car_reg_no;
+	public String getCarRegNo() {
+		return carRegNo;
 	}
 
-	public void setCar_reg_no(String car_reg_no) {
-		this.car_reg_no = car_reg_no;
+	public void setCarRegNo(String carRegNo) {
+		this.carRegNo = carRegNo;
 	}
 
-	public String getCar_brand() {
-		return car_brand;
+	public String getCarBrand() {
+		return carBrand;
 	}
 
-	public void setCar_brand(String car_brand) {
-		this.car_brand = car_brand;
+	public void setCarBrand(String carBrand) {
+		this.carBrand = carBrand;
 	}
 
-	public String getCar_brand_model() {
-		return car_brand_model;
+	public String getCarBrandModel() {
+		return carBrandModel;
 	}
 
-	public void setCar_brand_model(String car_brand_model) {
-		this.car_brand_model = car_brand_model;
+	public void setCarBrandModel(String carBrandModel) {
+		this.carBrandModel = carBrandModel;
 	}
 
 	public Customer getCustomer() {

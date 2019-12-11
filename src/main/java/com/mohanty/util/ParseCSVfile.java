@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.mohanty.exception.AppException;
 import com.mohanty.model.Customer;
 
 @Component
@@ -18,9 +19,9 @@ public class ParseCSVfile {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger("ParseCSVfile.class");
 	
-	public List<Customer> parseCSVFile(MultipartFile file) throws Exception  {
+	public List<Customer> parseCSVFile(MultipartFile file)   {
 
-		final List<Customer> customerList = new ArrayList<Customer>();
+		final List<Customer> customerList = new ArrayList<>();
 
 		try (final BufferedReader br = new BufferedReader(new InputStreamReader(file.getInputStream()))) {
 
@@ -38,7 +39,7 @@ public class ParseCSVfile {
 
 		} catch (IOException e) {
 			LOGGER.error("Failed to parse CSV file {}", e);
-			throw new Exception("Failed to parse CSV file {}", e);
+			throw new AppException("Failed to parse CSV file {}", e);
 		}
 
 	}

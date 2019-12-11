@@ -13,9 +13,8 @@ public class AppDateTime {
 
 	public String getCurrentDate() {
 
-		SimpleDateFormat sdf = new SimpleDateFormat("dd-MMMM-YYYY HH:mm:ss");
-		String pattern = sdf.format(new Date());
-		return pattern;
+		SimpleDateFormat sdf = new SimpleDateFormat("dd-MMMM-yyyy HH:mm:ss");
+		return sdf.format(new Date());
 
 	}
 }

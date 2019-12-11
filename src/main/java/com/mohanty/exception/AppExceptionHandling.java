@@ -25,7 +25,7 @@ public class AppExceptionHandling {
 		errorResponse.setMessage(exc.getMessage());
 		errorResponse.setTimestamp(timestamp.getCurrentDate());
 
-		return new ResponseEntity<AppErrorResponse>(errorResponse, HttpStatus.BAD_REQUEST);
+		return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
 	}
 
 	/**
@@ -38,7 +38,7 @@ public class AppExceptionHandling {
 		errorResponse.setMessage(exc.getMessage());
 		errorResponse.setTimestamp(timestamp.getCurrentDate());
 
-		return new ResponseEntity<AppErrorResponse>(errorResponse, HttpStatus.NOT_FOUND);
+		return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
 	}
 
 }
