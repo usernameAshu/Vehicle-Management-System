@@ -3,9 +3,9 @@ package com.mohanty.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.mohanty.model.Customer;
+import com.mohanty.model.Car;
 
 @Repository
-public interface AppRepository extends JpaRepository<Customer, Integer> {
+public interface CarRepository extends JpaRepository<Car, String> {
 
 }

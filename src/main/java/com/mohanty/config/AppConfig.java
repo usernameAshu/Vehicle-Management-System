@@ -21,6 +21,7 @@ public class AppConfig extends WebSecurityConfigurerAdapter {
 
 	// Authentication
 	
+	
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
        
