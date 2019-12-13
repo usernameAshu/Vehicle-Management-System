@@ -12,11 +12,14 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
 @Configuration
 @EnableJpaRepositories(basePackages="com.mohanty.repository")
 @ComponentScan(basePackages="com.mohanty")
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled=true)
+@EnableSwagger2
 public class AppConfig extends WebSecurityConfigurerAdapter {
 
 	// Authentication
