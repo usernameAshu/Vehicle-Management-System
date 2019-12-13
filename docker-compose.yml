@@ -1,0 +1,8 @@
+version : '3.6'
+
+services:
+  my-docker-compose-app:
+    image: my-docker-compose-app
+    build: .
+    ports:
+      - 9090:8081

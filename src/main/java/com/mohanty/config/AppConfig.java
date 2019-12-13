@@ -21,6 +21,7 @@ public class AppConfig extends WebSecurityConfigurerAdapter {
 
 	// Authentication
 	
+	
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
        
@@ -38,10 +39,16 @@ public class AppConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 
-		http.csrf().disable();
+	//	http.csrf().disable();
+		
 		http.authorizeRequests()
 		.antMatchers("**/secured/**").authenticated()
+		.antMatchers("/h2_console/**").permitAll()
 		.anyRequest().permitAll()
+		.and()
+        .headers().frameOptions().disable()
+        .and()
+        .csrf().ignoringAntMatchers("/h2-console/**")
 		.and()
 		.formLogin().permitAll();
 	}

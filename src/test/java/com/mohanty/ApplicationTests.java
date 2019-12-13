@@ -14,7 +14,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.mohanty.model.Customer;
-import com.mohanty.repository.AppRepository;
+import com.mohanty.repository.CustomerRepository;
 import com.mohanty.service.AppService;
 
 @RunWith(SpringRunner.class)
@@ -25,7 +25,7 @@ class ApplicationTests {
 	AppService service;
 	
 	@MockBean
-	AppRepository repo;
+	CustomerRepository repo;
 	
 	@Test
 	public void getAllCustomersTest() {

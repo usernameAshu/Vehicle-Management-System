@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.mohanty.model.Customer;
-import com.mohanty.repository.AppRepository;
+import com.mohanty.repository.CustomerRepository;
 import com.mohanty.util.ParseCSVfile;
 
 @Service
@@ -19,7 +19,7 @@ public class AppService {
 	private static final Logger LOGGER = LoggerFactory.getLogger("AppService.class");
 
 	@Autowired
-	AppRepository repo;
+	CustomerRepository repo;
 
 	@Autowired
 	ParseCSVfile parseFile;
